@@ -15,8 +15,10 @@ syn sync fromstart
 syn case match
 
 " standard control statements
-syn keyword gStatement Set Call
-syn keyword gControl Break Return If Else While Select Case When Default
+syn keyword gStatement Set Call Return Break
+syn keyword gConditional If Else Select When
+syn keyword gLabel Case Default
+syn keyword gRepeat While Loop
 
 syn keyword gSystem Function Description Returns Parameters Static Local
 syn keyword gSystem Actions Derived Class Instance Constructor Destructor
@@ -34,8 +36,8 @@ syn keyword gBool TRUE FALSE
 syn keyword gConstant STRING_Null NUMBER_Null DATETIME_Null BINARY_Null
 syn keyword gConstant OBJ_Null
 
-" conditionals
-syn keyword gConditional AND OR NOT
+" logical
+syn keyword gLogical AND OR NOT
 
 " parantheses
 syn match gParenError display /)/
@@ -73,6 +75,8 @@ if version >= 508 || !exists("did_gupta_syn_inits")
     HiLink gControl Function
     HiLink gStatement Statement
     HiLink gConditional Conditional
+    HiLink gRepeat Repeat
+    HiLink gLabel Label
     HiLink gSystem Label
     HiLink gType Type
     HiLink gBool Boolean
@@ -86,6 +90,7 @@ if version >= 508 || !exists("did_gupta_syn_inits")
     HiLink gParen Function
     HiLink gNumber Number
     HiLink gOperator Operator
+    HiLink gLogical Operator
     HiLink gConstant Constant
     HiLink gSql Constant
     HiLink gParenError Error
