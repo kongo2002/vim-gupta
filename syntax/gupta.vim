@@ -28,7 +28,7 @@ syn keyword gSystem Functions FunctionalVar Functional
 syn keyword gType Sql String Number Boolean Date Time Handle File Window
 
 " todo statements
-syn keyword gTodo TODO FIXME XXX
+syn keyword gTodo TODO FIXME XXX contained
 
 " constants
 syn keyword gBool TRUE FALSE
@@ -64,7 +64,7 @@ syn region gSingleString start=+[^0-9]'+lc=1 skip=+\\\\\|\\'+ end=+'+
 syn region gDescription matchgroup=gDescriptionBound start=/^\s\+Description:/ end=/^\s\+\(Returns\|Derived\|Tool\|Ribbon\)\>/
 
 " comments
-syn match gComment /!\($\|[^=].*$\)/ contains=gTodo
+syn match gComment /!\($\|[^=].*$\)/ contains=gTodo,gDoubleString
 syn match gComment /^\s\+|.*$/ contains=gTodo
 syn match gComment /^\s\++-.*$/ contains=gTodo
 
