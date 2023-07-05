@@ -54,14 +54,19 @@ syn match gNumber display /\<\d*\.\?\d\+"\?\>/
 syn match gSql display /\<SQL_[A-Z][a-zA-Z]\+\>/
 
 " strings
-syn region gDoubleString start=+\(^\|[^0-9]\)"+lc=1 skip=+\\\\\|\\"+ end=+"+
-syn region gSingleString start=+\(^\|[^0-9]\)'+lc=1 skip=+\\\\\|\\'+ end=+'+
+syn region gDoubleString start=+^"+ skip=+\\\\\|\\"+ end=+"+
+syn region gDoubleString start=+[^0-9]"+lc=1 skip=+\\\\\|\\"+ end=+"+
+
+syn region gSingleString start=+^'+ skip=+\\\\\|\\'+ end=+'+
+syn region gSingleString start=+[^0-9]'+lc=1 skip=+\\\\\|\\'+ end=+'+
 
 " description
 syn region gDescription matchgroup=gDescriptionBound start=/^\s\+Description:/ end=/^\s\+\(Returns\|Derived\|Tool\|Ribbon\)\>/
 
 " comments
 syn match gComment /!\($\|[^=].*$\)/ contains=gTodo
+syn match gComment /^\s\+|.*$/ contains=gTodo
+syn match gComment /^\s\++-.*$/ contains=gTodo
 
 " default highlighting
 if version >= 508 || !exists("did_gupta_syn_inits")
