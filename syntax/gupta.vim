@@ -52,8 +52,8 @@ syn match gNumber display /\<\d*\.\?\d\+"\?\>/
 syn match gSql display /\<SQL_[A-Z][a-zA-Z]\+\>/
 
 " strings
-syn region gDoubleString start=+[^0-9]"+lc=1 skip=+\\\\\|\\"+ end=+"+
-syn region gSingleString start=+[^0-9]'+lc=1 skip=+\\\\\|\\'+ end=+'+
+syn region gDoubleString start=+\(^\|[^0-9]\)"+lc=1 skip=+\\\\\|\\"+ end=+"+
+syn region gSingleString start=+\(^\|[^0-9]\)'+lc=1 skip=+\\\\\|\\'+ end=+'+
 
 " description
 syn region gDescription matchgroup=gDescriptionBound start=/^\s\+Description:/ end=/^\s\+\(Returns\|Derived\|Tool\|Ribbon\)\>/
