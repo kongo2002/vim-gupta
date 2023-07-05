@@ -37,9 +37,6 @@ syn keyword gConstant OBJ_Null
 " conditionals
 syn keyword gConditional AND OR NOT
 
-" comments
-syn match gComment /![^=]*$/ contains=gTodo
-
 " parantheses
 syn match gParenError display /)/
 syn region gParenInner  matchgroup=gParen start=/(/ end=/)/ contains=ALLBUT,gTodo,gParen
@@ -60,6 +57,9 @@ syn region gSingleString start=+[^0-9]'+lc=1 skip=+\\\\\|\\'+ end=+'+
 
 " description
 syn region gDescription matchgroup=gDescriptionBound start=/^\s\+Description:/ end=/^\s\+\(Returns\|Derived\|Tool\|Ribbon\)\>/
+
+" comments
+syn match gComment /!\($\|[^=].*$\)/ contains=gTodo
 
 " default highlighting
 if version >= 508 || !exists("did_gupta_syn_inits")
