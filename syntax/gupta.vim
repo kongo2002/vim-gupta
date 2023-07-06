@@ -65,8 +65,6 @@ syn region gDescription matchgroup=gDescriptionBound start=/^\s\+Description:/ e
 
 " comments
 syn match gComment /!\($\|[^=].*$\)/ contains=gTodo,gDoubleString
-syn match gComment /^\s\+|.*$/ contains=gTodo
-syn match gComment /^\s\++-.*$/ contains=gTodo
 
 " default highlighting
 if version >= 508 || !exists("did_gupta_syn_inits")
