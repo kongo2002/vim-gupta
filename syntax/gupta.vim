@@ -64,7 +64,7 @@ syn region gSingleString start=+[^0-9]'+lc=1 skip=+\\\\\|\\'+ end=+'+
 syn region gDescription matchgroup=gDescriptionBound start=/^\s\+Description:/ end=/^\s\+\(Returns\|Derived\|Tool\|Ribbon\)\>/
 
 " comments
-syn match gComment /!\($\|[^=].*$\)/ contains=gTodo,gDoubleString
+syn match gComment /!\($\|[^=].*$\)/ contains=gTodo
 
 " default highlighting
 if version >= 508 || !exists("did_gupta_syn_inits")
