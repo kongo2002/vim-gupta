@@ -23,3 +23,9 @@ call plug#end()
 ```
 
 [vim-plug]: https://github.com/junegunn/vim-plug
+
+
+### Tree-sitter
+
+You can find a very rudimentary tree-sitter definition at
+[kongo2002/tree-sitter-gupta](https://github.com/kongo2002/tree-sitter-gupta)
