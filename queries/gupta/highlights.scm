@@ -92,8 +92,12 @@
 (section_declaration type: (declaration_name) @type)
 (section_declaration name: (section_value) @variable)
 
+; section toggles
+(section_toggle type: (declaration_name) @type)
+(section_toggle value: (toggle_value) @constant.builtin)
+
 ; section headers
-(section_header (declaration_name) @namespace)
+(section (declaration_name) @namespace)
 (description_section "Description" @namespace)
 (action_section "Actions" @namespace)
 
