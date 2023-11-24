@@ -21,6 +21,7 @@
  "Else"
  "If"
  "On"
+ "When"
 ] @conditional
 
 (break) @keyword
