@@ -74,13 +74,10 @@
 ] @constant.builtin
 
 ; function calls
-(call (function function: (identifier) @function.call))
-(call (member_function function: (identifier) @function.call))
-(call (member_function class: (identifier) @property))
+(call (function function: (refs) @function.call))
 
 ; assignments
-(assignment left: (identifier) @property)
-(assignment left: (array_expression variable: (identifier) @property))
+(assignment left: (refs) @property)
 
 ; labels
 "Default" @label
