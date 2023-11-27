@@ -45,8 +45,11 @@
 ; operators
 [
   "NOT"
+  "not"
   "OR"
+  "or"
   "AND"
+  "and"
 ] @keyword.operator
 
 [
@@ -85,6 +88,9 @@
 (select_case "Case" @label)
 
 "Case" @keyword
+
+; when
+(when_statement trigger: (type_name) @type)
 
 ; section declarations
 (section_declaration type: (declaration_name) @type)
