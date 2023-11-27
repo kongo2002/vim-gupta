@@ -103,7 +103,7 @@
 ; section headers
 (section (declaration_name) @namespace)
 (description_section "Description" @namespace)
-(action_section "Actions" @namespace)
+(action_section ["Actions" "Menu Actions" "Application Actions" "Message Actions"] @namespace)
 
 ; description
 (description_section text: (description_text) @comment @spell)
