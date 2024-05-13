@@ -44,11 +44,8 @@
 
 ; operators
 [
-  "NOT"
   "not"
-  "OR"
   "or"
-  "AND"
   "and"
 ] @keyword.operator
 
